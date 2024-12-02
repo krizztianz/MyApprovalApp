@@ -1,0 +1,63 @@
+:root {
+  /* Primary Colors */
+  --bs-primary: #284a6f; /* Custom primary blue */
+  --bs-secondary: #223b59; /* Darker blue for secondary elements */
+  --bs-success: #28a745; /* Default green (can be customized if needed) */
+  --bs-info: #17a2b8; /* Default info color (can be customized if needed) */
+  --bs-warning: #ffc107; /* Default yellow (can be customized if needed) */
+  --bs-danger: #dc3545; /* Default red (can be customized if needed) */
+  --bs-light: #f8f9fa; /* Light background color */
+  --bs-dark: #343a40; /* Dark text and background */
+  --bs-white: #ffffff; /* White color for text and backgrounds */
+
+  /* Navbar Customization */
+  --bs-navbar-bg: #284a6f; /* Navbar background */
+  --bs-navbar-color: #ffffff; /* Navbar text color */
+  --bs-navbar-link-color: #ffffff; /* Navbar link color */
+  --bs-navbar-link-hover-color: #f8f9fa; /* Navbar link hover color */
+  --bs-navbar-link-active-color: #1f3c5a; /* Navbar active link color */
+
+  /* Sidebar Customization */
+  --bs-sidebar-bg: #223b59; /* Sidebar background */
+  --bs-sidebar-link-color: #ffffff; /* Sidebar link color */
+  --bs-sidebar-link-hover-bg: #3a5b8a; /* Sidebar link hover background */
+  --bs-sidebar-link-active-bg: #1f3c5a; /* Sidebar active link background */
+
+  /* Button Customization */
+  --bs-btn-primary-bg: #284a6f; /* Primary button background */
+  --bs-btn-primary-border: #284a6f; /* Primary button border */
+  --bs-btn-primary-hover-bg: #1f3c5a; /* Primary button hover background */
+  --bs-btn-primary-hover-border: #1f3c5a; /* Primary button hover border */
+  --bs-btn-secondary-bg: #223b59; /* Secondary button background */
+  --bs-btn-secondary-border: #223b59; /* Secondary button border */
+  --bs-btn-secondary-hover-bg: #3a5b8a; /* Secondary button hover background */
+
+  /* Link Customization */
+  --bs-link-color: #284a6f; /* Link color */
+  --bs-link-hover-color: #1f3c5a; /* Link hover color */
+  --bs-link-active-color: #1f3c5a; /* Active link color */
+
+  /* Card Customization */
+  --bs-card-bg: #ffffff; /* Card background */
+  --bs-card-border-color: #ddd; /* Card border color */
+
+  /* Border and Dividers */
+  --bs-border-color: #ddd; /* General border color */
+  --bs-border-radius: .25rem; /* Border radius */
+
+  /* Backgrounds */
+  --bs-bg-light: #f8f9fa; /* Light background for elements */
+  --bs-bg-dark: #343a40; /* Dark background for elements */
+  --bs-bg-body: #ffffff; /* Body background */
+
+  /* General Text Colors */
+  --bs-body-color: #343a40; /* Body text color */
+  --bs-muted-color: #6c757d; /* Muted text color */
+
+  /* Navbar & Sidebar Active Item */
+  --bs-nav-link-active-color: #ffffff; /* Active nav link color */
+  --bs-nav-link-active-bg: #1f3c5a; /* Active nav link background color */
+
+  /* Misc */
+  --bs-toggle-icon-color: #ffffff; /* Sidebar toggle button icon color */
+}

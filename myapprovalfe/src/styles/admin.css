@@ -1,0 +1,188 @@
+/* Custom Styles */
+body {
+  background-color: #f8f9fa;
+}
+
+.navbar {
+  background-color: #284a6f;
+  color: white;
+  height: 56px;
+}
+
+.navbar .nav-link {
+  color: white;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  background-color: #223b59;
+  color: white;
+  width: 250px;  /* Default sidebar width */
+  transition: width 0.3s ease, left 0.3s ease;
+  min-height: 100vh; /* Make sure it takes the full viewport height */
+  overflow-y: auto;
+}
+
+.sidebar.collapsed {
+  width: 0;
+}
+
+.sidebar.collapsed a {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar.collapsed a.active {
+  display: none; /* Completely hides the active link in collapsed mode */
+}
+
+.sidebar a {
+  color: white;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar a:hover {
+  background-color: #3a5b8a;
+}
+
+.sidebar a.active {
+  background-color: #1f3c5a;
+  font-weight: bold;
+}
+
+/* Sidebar profile picture styles */
+.sidebar .profile-section {
+  display: flex;
+  flex-direction: column;  /* Stack the items vertically */
+  align-items: center;     /* Center align horizontally */
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar .profile-section img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.sidebar .profile-section h5 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.sidebar .submenu {
+  display: none;
+  padding-left: 20px;
+}
+
+.sidebar .submenu.show {
+  display: block;
+}
+
+.sidebar .submenu .submenu-child {
+  display: none;
+  padding-left: 20px;
+}
+
+.sidebar .submenu .submenu-child.show {
+  display: block;
+}
+
+/* Sidebar Toggle Button */
+.sidebar-toggle {
+  position: absolute;
+  top: 50%;
+  left: 250px; /* Adjust based on sidebar width */
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 50% !important; /* This makes the button circular */
+  height: 40px; /* Set equal height and width to form a perfect circle */
+  width: 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional shadow for effect */
+  transition: left 0.3s ease;
+  padding: 0; /* Remove any extra padding */
+  border: none; /* Remove border if there's any */
+}
+
+/* Move the button when sidebar is collapsed */
+.sidebar.collapsed + .sidebar-toggle {
+  left: 0; /* Position toggle button when sidebar is collapsed */
+}
+
+/* Submenu styles */
+.submenu {
+  display: none; /* Hidden by default */
+  padding-left: 20px;
+}
+
+.submenu.show {
+  display: block; /* Visible when .show is applied */
+}
+
+.submenu-indicator, .submenu-child-indicator {
+  float: right;
+  transition: transform 0.3s ease;
+}
+
+.submenu-expanded .submenu-indicator,
+.submenu-expanded .submenu-child-indicator {
+  transform: rotate(90deg);
+}
+
+/* Main Layout */
+.main-content {
+  display: flex; /* This makes the sidebar and content sit side by side */
+  flex-wrap: nowrap;
+  height: 100vh; /* Make sure the sidebar and content take the full height */
+}
+
+.content {
+  flex-grow: 1;  /* This makes the content take the remaining space */
+  padding: 20px;
+  transition: margin-left 0.3s ease; /* Smooth transition for margin changes */
+}
+
+/* Responsive Sidebar */
+@media (max-width: 768px) {
+  .sidebar {
+    position: absolute;
+    z-index: 1000;
+    width: 250px; /* Increased width for mobile view */
+  }
+
+  .sidebar-toggle {
+    left: 250px; /* Adjusted toggle position according to new sidebar width */
+    z-index: 1100;
+    transition: left 0.3s ease;
+  }
+
+  .sidebar.collapsed + .sidebar-toggle {
+    left: 0;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .sidebar {
+    width: 250px; /* Even wider sidebar for very small devices */
+  }
+
+  .sidebar-toggle {
+    left: 250px; /* Adjusted toggle position according to new sidebar width */
+  }
+}
