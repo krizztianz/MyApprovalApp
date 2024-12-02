@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import profilePic from '../../assets/profilepic.svg';
 
 const Sidebar = () => {
   const [collapsed, setCollapsed] = useState(false);
@@ -61,7 +62,7 @@ const Sidebar = () => {
       <div className={`sidebar ${collapsed ? 'collapsed' : ''}`}>
         {/* Profile Section */}
         <div className="profile-section">
-          <img src="https://placehold.co/100" alt="Profile Picture" className="rounded-circle" />
+          <img src={profilePic} alt="Profile Picture" className="rounded-circle" />
           <h5>John Doe</h5>
         </div>
 
